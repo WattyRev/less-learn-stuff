@@ -1,0 +1,21 @@
+/**
+ * Mixins
+ */
+// A simple class
+.truncate {
+    white-space: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// My cool thing should also be truncated, but I don't need to apply the .truncate
+// class to my element, nor do I need to rewrite my styles.
+.my-cool-thing {
+    .truncate;
+}
+
+// We can even copy complex nested styles. This is good for aliasing or making new
+// things that are very similar to other things.
+.my-other-cool-thing {
+    .my-namespace;
+}

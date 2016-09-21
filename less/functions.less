@@ -1,0 +1,29 @@
+/**
+ * Functions
+ */
+// Functions are handy for giving yourself shortcuts to groups of styles.
+.border-top-radius(@size) {
+    border-top-left-radius: @size;
+    border-top-right-radius: @size;
+}
+.padding-vertical(@size) {
+    padding-top: @size;
+    padding-bottom: @size;
+}
+.transition(@style) {
+    -webkit-transition: @style;
+    -moz-transition: @style;
+    -o-transition: @style;
+    transition: @style;
+}
+// Example using the functions
+.my-element {
+    .border-top-radius(3px);
+    .padding-vertical(10px);
+    .transition(~".3s padding");
+}
+
+/**
+ * Loops
+ */
+// Functions can also involve loops, allowing you to generate large blocks of styles with much less work.

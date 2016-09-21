@@ -1,0 +1,86 @@
+/**
+ * Nested styles
+ */
+.my-namespace {
+  display: block;
+}
+.my-namespace .child-item {
+  display: inline;
+}
+.my-namespace ~ .sibling,
+.my-namespace + .next {
+  display: none;
+}
+.my-namespace.additional-class {
+  border: 1px solid #ff0000;
+}
+.my-namespace-similar-class {
+  display: inline-block;
+}
+.my-namespace-this-gets-confusing.my-namespace {
+  display: table;
+}
+@media screen and (max-width: 700px) {
+  .my-namespace {
+    opacity: 1;
+  }
+  .my-namespace .child-item {
+    opacity: .5;
+  }
+}
+/**
+ * Mixins
+ */
+.truncate {
+  white-space: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.my-cool-thing {
+  white-space: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.my-other-cool-thing {
+  display: block;
+}
+.my-other-cool-thing .child-item {
+  display: inline;
+}
+.my-other-cool-thing ~ .sibling,
+.my-other-cool-thing + .next {
+  display: none;
+}
+.my-other-cool-thing.additional-class {
+  border: 1px solid #ff0000;
+}
+.my-other-cool-thing-similar-class {
+  display: inline-block;
+}
+.my-other-cool-thing-this-gets-confusing.my-other-cool-thing {
+  display: table;
+}
+@media screen and (max-width: 700px) {
+  .my-other-cool-thing {
+    opacity: 1;
+  }
+  .my-other-cool-thing .child-item {
+    opacity: .5;
+  }
+}
+/**
+ * Functions
+ */
+.my-element {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-transition: .3s padding;
+  -moz-transition: .3s padding;
+  -o-transition: .3s padding;
+  transition: .3s padding;
+}
+/**
+ * Loops
+ */

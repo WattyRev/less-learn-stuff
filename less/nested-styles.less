@@ -1,0 +1,42 @@
+/**
+ * Nested styles
+ */
+// Define a class that serves as a wrapper for the thing you are styling. This
+// serves as a namespace for your styles.
+.my-namespace {
+    display: block;
+
+    // Reference items that are descendants of .my-namespace
+    .child-item {
+        display: inline;
+    }
+
+    // Reference siblings and next items
+    ~ .sibling, + .next {
+        display: none;
+    }
+
+    // Style for when the namespace has an additional class
+    &.additional-class {
+        border: 1px solid @red;
+    }
+    
+    // Style a similarly named class... starting to get confusing
+    &-similar-class {
+        display: inline-block;
+    }
+
+    // Wat?
+    &-this-gets-confusing& {
+        display: table;
+    }
+
+    // Add in responsive breakpoints
+    @media @m-screen-small {
+        opacity: 1;
+
+        .child-item {
+            opacity: .5;
+        }
+    }
+}

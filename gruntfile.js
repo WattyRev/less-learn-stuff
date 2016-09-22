@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Project configuration.
   grunt.initConfig({
@@ -29,18 +28,6 @@ module.exports = function(grunt) {
           "css/app.css": "less/app.less"
         }
       }
-    },
-
-    // Minify the app.css
-    cssmin: {
-        target: {
-            files: [{
-                expand: true,
-                cwd: 'css',
-                src: ['app.css'],
-                dest: 'css',
-            }]
-        }
     }
   });
 
@@ -50,9 +37,8 @@ module.exports = function(grunt) {
      'watch'
   ]);
 
-  // Run less compilation and minify the results
+  // Run less compilation
   grunt.registerTask('build', [
-      'less',
-      'cssmin'
+      'less'
   ]);
 };

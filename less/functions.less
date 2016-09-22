@@ -27,3 +27,37 @@
  * Loops
  */
 // Functions can also involve loops, allowing you to generate large blocks of styles with much less work.
+/**
+ * Example grid
+ */
+._grid(@name; @columns; @index: 1) when (@index =< @columns) {
+    ._grid(@name; @columns; (@index + 1));
+    .col-@{name}-@{index} {
+        ._column-config;
+        width: ( percentage(@index / @columns) );
+    }
+}
+._grid(xs; 12;);
+@media screen and (min-width: 700px) {
+    ._grid(sm; 12;);
+}
+@media screen and (min-width: 1200px) {
+    ._grid(md; 12;);
+}
+@media screen and (min-width: 1500px) {
+    ._grid(lg; 12;);
+}
+
+/**
+ * Example width helper classes
+ */
+@_static-widths: 35, 40, 50, 70, 78, 100, 110, 270, 135, 185;
+._static-widths(@widths; @index;) when (@index > 0) {
+    ._static-widths(@widths; (@index - 1););
+    @_width: extract(@widths, @index);
+
+    .width-px-@{_width} {
+        width: ~"@{_width}px";
+    }
+}
+._static-widths(@_static-widths; length(@_static-widths));

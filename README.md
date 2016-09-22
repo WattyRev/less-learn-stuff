@@ -14,7 +14,7 @@ Less is very easy to setup and start using. View this project's package.json and
 ## Project organization using import
 Less allows you to break up your styles into multiple files, and consolidate them using `@import`. View `less/app.less` as an example.
 
-## Vriables
+## Variables
 Keep your colors, sizes, and other concepts consistent by saving them to variables. View `less/variables.less` as an example.
 
 ## Nesting styles

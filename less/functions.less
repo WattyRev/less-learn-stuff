@@ -33,7 +33,6 @@
 ._grid(@name; @columns; @index: 1) when (@index =< @columns) {
     ._grid(@name; @columns; (@index + 1));
     .col-@{name}-@{index} {
-        ._column-config;
         width: ( percentage(@index / @columns) );
     }
 }

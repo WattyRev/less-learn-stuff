@@ -18,10 +18,15 @@ Less allows you to break up your styles into multiple files, and consolidate the
 Keep your colors, sizes, and other concepts consistent by saving them to variables. View `less/variables.less` as an example.
 
 ## Nesting styles
-Reduce the amount of code you write, and improve the organization of your styles by nesting, but beware of the potential pitfalls of unnecessary nesting. View `less/nested-styles.less` as an example.
+Reduce the amount of code you write, and improve the organization of your styles by nesting, but beware of the potential pitfalls of unnecessary or complex nesting. View `less/nested-styles.less` as an example.
 
 ## Mixins
 Use mixins to copy styles from one class to another, or to create a shared set of styles to be used in multiple contexts. View `less/mixins.less` as an example.
 
 ## Functions
 Less functions provide a lot of power allowing you to create reusable styling scripts, or to generate large amounts of repetitive styles in a few lines. View `less/functions.less` as an example.
+
+## Q&A
+**What are we missing out on by using Less instead of Sass?**
+Sass has some very powerful tools like Sprite management, but sprites are not very useful unless we support older browsers (IE8-). Most other features of Sass have an equilivant in Less. Transitioning between Sass and Less is very easy as a developer, so our choice doesn't really limit our pool of developer candidates. In the end, we are not missing out on much, but are gaining a simpler setup since Less is run using Node instead of Ruby.
+

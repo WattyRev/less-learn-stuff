@@ -28,5 +28,6 @@ Less functions provide a lot of power allowing you to create reusable styling sc
 
 ## Q&A
 **What are we missing out on by using Less instead of Sass?**
+
 Sass has some very powerful tools like Sprite management, but sprites are not very useful unless we support older browsers (IE8-). Most other features of Sass have an equilivant in Less. Transitioning between Sass and Less is very easy as a developer, so our choice doesn't really limit our pool of developer candidates. In the end, we are not missing out on much, but are gaining a simpler setup since Less is run using Node instead of Ruby.
 
